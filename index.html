@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <title>Home - Travelies</title>
+    <link href="./css/style2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <div class="navbar-menu" id="navbar">
+            <div class="logo-container">
+                <div class="humberger">
+                    <div href="" class="icon" onclick="navAdjust()">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
+                <img id="logo" src="./assets/logo.png" alt="Travelies">
+                <a href="./index.html"> Travelies </a>
+            </div>
+            <div class="menu">
+                <div class="menus">
+                    <ul>
+                        <li class="menu-item"><a class="menu-active" href="./index.html">Home</a></li>
+                        <li class="menu-item dropdown" onmouseover="arrowUp()" onmouseout="arrowDown()">
+                            <a href="./rent.html">Rent
+                                <!-- <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.34644 1L8.67317 9L15.9999 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> -->
+                                <i id="dropdown-arr" class="fa fa-angle-down"></i>
+                            </a>   
+                            <div class="dropdown-menu">
+                                <div class="dropdown-item">
+                                    <a href="./rent.html#hiking">Hiking Gears</a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href="./rent.html#fishing">Fishing Gears</a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href="./rent.html#camping">Camping Gears</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item"><a href="./aboutus.html">About Us</a></li>
+                        <li class="menu-item"><a href="./contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="start">
+                    <div class="btn-start">
+                        <a href="./startadventure.html">START ADVENTURE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- OPENING SECTION  -->
+    <div class="uppest hero general-padding">
+        <div class="hero-left">
+            <div class="banner">
+                <div class="banner-text">
+                    <div class="text-top">
+                        <div class="text-left hero-text-b" id="changeable-txt1">
+                            TRAVEL 
+                        </div>
+                        <div class="text-right hero-text-s">
+                            TO PLACES
+                        </div>
+                    </div>
+                    <div class="text-bottom">
+                        <div class="text-left hero-text-s">
+                            WHERE HAPPINESS
+                        </div>
+                        <div class="text-right hero-text-b" id="changeable-txt2">
+                            LIES
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-btn">
+                    <div class="btn hero-text-btn">
+                       <a href="#hiking-section">Go!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="compass">
+                <svg class="half-round" width="450" height="380" viewBox="0 0 519 269" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.23678 255.098C5.77591 221.747 12.8788 188.828 26.1399 158.222C39.401 127.616 58.5607 99.921 82.5249 76.7192C106.489 53.5174 134.789 35.2629 165.808 22.998C196.827 10.733 229.958 4.69785 263.309 5.23698C296.66 5.77611 329.579 12.879 360.185 26.1401C390.792 39.4012 418.486 58.5609 441.688 82.5251C464.89 106.489 483.144 134.789 495.409 165.808C507.674 196.827 513.71 229.958 513.17 263.309" 
+                          stroke="white" stroke-width="10" stroke-linecap="round" stroke-dasharray="10 20"/>
+                </svg>                    
+                <div class="compass-top">
+                    <div class="compass-circle" id="fishing" onclick="switch_circle(this.id)">
+                        <svg width="85" height="85" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_i_14_656)">
+                            <circle cx="50" cy="50" r="50" fill="#FAA955"/>
+                            <g filter="url(#filter1_d_14_656)">
+                            <path d="M61.3333 36.25V63.75C61.3333 80.25 34.25 80.25 34.25 63.75V52.75L39.6667 58.25M61.3333 36.25C62.7699 36.25 64.1477 35.6705 65.1635 34.6391C66.1793 33.6076 66.75 32.2087 66.75 30.75C66.75 29.2913 66.1793 27.8924 65.1635 26.8609C64.1477 25.8295 62.7699 25.25 61.3333 25.25C59.8967 25.25 58.519 25.8295 57.5032 26.8609C56.4873 27.8924 55.9167 29.2913 55.9167 30.75C55.9167 32.2087 56.4873 33.6076 57.5032 34.6391C58.519 35.6705 59.8967 36.25 61.3333 36.25Z" stroke="white" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            </g>
+                            <defs>
+                            <filter id="filter0_i_14_656" x="0" y="0" width="100" height="104" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_14_656"/>
+                            </filter>
+                            <filter id="filter1_d_14_656" x="14" y="17" width="73" height="74" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14_656"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14_656" result="shape"/>
+                            </filter>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="compass-bottom">
+                    <div class="compass-bottom-l" id="hiking" onclick="switch_circle(this.id)">
+                        <svg width="85" height="85" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_i_14_657)">
+                            <circle cx="50" cy="50" r="50" fill="#B67B3E"/>
+                            <g clip-path="url(#clip0_14_657)" filter="url(#filter1_d_14_657)">
+                            <path d="M37.2753 75.4171C36.7849 77.3946 37.9789 79.3962 39.9429 79.8894C40.2419 79.9654 40.541 79.9988 40.8366 79.9988C42.4786 79.9988 43.9727 78.8811 44.391 77.2067L47.2831 65.5715L41.2353 59.4894L37.2753 75.4171ZM38.9815 52.8174L43.6977 34.4824C43.9487 33.5121 43.338 32.5292 42.3319 32.2861C37.304 31.0738 32.2085 34.0226 30.9515 38.874L28.056 50.182C27.805 51.1522 28.4158 52.1352 29.4218 52.3783L36.7047 54.1356C37.7119 54.3776 38.7306 53.7876 38.9815 52.8174ZM70.1665 39.4375H68.3332C67.3202 39.4375 66.4998 40.2626 66.4998 41.2812V43.125H62.5181L57.1579 37.7343C55.8871 36.4541 54.1947 35.75 52.3958 35.75C49.2997 35.75 46.6127 37.8588 45.8611 40.8802L42.7765 53.2933C42.6231 53.9111 42.6313 54.5583 42.8004 55.172C42.9694 55.7857 43.2936 56.3449 43.7413 56.7953L53.6665 66.7769V76.3125C53.6665 78.3487 55.3085 80 57.3332 80C59.3578 80 60.9998 78.3487 60.9998 76.3125V66.7769C60.9998 64.8075 60.2367 62.9557 58.8514 61.5625L53.4866 56.1672C53.5038 56.1096 53.5427 56.0647 53.5576 56.0047L55.8367 46.8355L58.4068 49.4203C59.0943 50.1117 60.027 50.5012 60.9987 50.5012H66.4987V78.1574C66.4987 79.1761 67.3191 80.0012 68.332 80.0012H70.1653C71.1783 80.0012 71.9987 79.1761 71.9987 78.1574V41.2812C71.9998 40.2626 71.1794 39.4375 70.1665 39.4375ZM55.4998 32.0625C58.5374 32.0625 60.9998 29.5861 60.9998 26.5312C60.9998 23.4764 58.5374 21 55.4998 21C52.4622 21 49.9998 23.4764 49.9998 26.5312C49.9998 29.5861 52.4622 32.0625 55.4998 32.0625Z" fill="white"/>
+                            </g>
+                            </g>
+                            <defs>
+                            <filter id="filter0_i_14_657" x="0" y="0" width="100" height="104" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_14_657"/>
+                            </filter>
+                            <filter id="filter1_d_14_657" x="24" y="21" width="52" height="67" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14_657"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14_657" result="shape"/>
+                            </filter>
+                            <clipPath id="clip0_14_657">
+                            <rect width="44" height="59" fill="white" transform="translate(28 21)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="compass-bottom-m">
+                        <div class="compass-content">
+                            <img id="compass-img" src="./assets/Mask_group_h.png" alt="hiking" width="250" height="250">
+
+                            <div class="compass-ornament">
+                                <div class="compass-arrow">
+                                    <svg class="rotate" id="arrow" width="150" height="35" viewBox="0 0 156 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g filter="url(#filter0_d_120_666)">
+                                        <path id="color-arrow" d="M4.88525 17.8047L78.171 3.08226V32.5271L4.88525 17.8047Z" fill="#B67B3E"/>
+                                        <path d="M151.457 17.8047L78.1713 3.08226V32.5271L151.457 17.8047Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <filter id="filter0_d_120_666" x="0.885254" y="3.08228" width="154.572" height="37.4448" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dy="4"/>
+                                        <feGaussianBlur stdDeviation="2"/>
+                                        <feComposite in2="hardAlpha" operator="out"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_120_666"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_120_666" result="shape"/>
+                                        </filter>
+                                        </defs>
+                                    </svg>                                        
+                                </div>
+                                <div class="compass-text">
+                                    <a id="compass-text" href="#hiking-section"> Hiking </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compass-bottom-r" id="camping" onclick="switch_circle(this.id)">
+                        <svg width="85" height="85" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_i_14_655)">
+                            <circle cx="50" cy="50" r="50" fill="#BF9D46"/>
+                            <g clip-path="url(#clip0_14_655)" filter="url(#filter1_d_14_655)">
+                            <path d="M54.0378 36.1563L77.7615 65.3817C78.567 66.3778 79 67.6029 79 68.868V71.2188C79 73.8584 76.8351 76 74.1667 76H25.8333C23.1639 76 21 73.8584 21 71.2188V68.868C21 67.6029 21.4358 66.3778 22.2355 65.3817L45.8715 36.1563L41.0382 30.1787C39.8399 28.8041 40.1521 26.798 41.5417 25.6986C42.9313 24.5989 44.9552 24.8218 45.9823 26.1963L50 31.0543L53.9271 26.1963C55.0448 24.8218 57.0688 24.5989 58.3677 25.6986C59.8479 26.798 60.0694 28.8041 58.8712 30.1787L54.0378 36.1563ZM62.033 69.625L50 54.0561L37.967 69.625H62.033Z" fill="white"/>
+                            </g>
+                            </g>
+                            <defs>
+                            <filter id="filter0_i_14_655" x="0" y="0" width="100" height="104" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_14_655"/>
+                            </filter>
+                            <filter id="filter1_d_14_655" x="17" y="25" width="66" height="59" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14_655"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14_655" result="shape"/>
+                            </filter>
+                            <clipPath id="clip0_14_655">
+                            <rect width="58" height="51" fill="white" transform="translate(21 25)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN SECTION -->
+
+    <!-- Title -->
+    <div class="title-section general-padding">
+        <div class="title-txt inner-shadow">
+            CHOOSE YOUR ADVENTURE
+        </div>
+        <div class="title-ornament">
+            <svg width="67" height="14" viewBox="0 0 67 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6.61184" cy="6.61184" r="6.61184" fill="#B67B3E"/>
+                <circle cx="33.5" cy="6.61184" r="6.61184" fill="#FAA955"/>
+                <circle cx="60.3882" cy="6.61184" r="6.61184" fill="#BF9D46"/>
+            </svg>                
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main-section">
+    
+        <!-- HIKING -->
+        <div class="hiking-section" id="hiking-section">
+            <div class="hiking-side-fill">
+                <!-- untuk backup hiking-bg -->
+            </div>  
+            <div class="hiking-main">
+                <div class="hiking-content">
+                    <div class="content-left">
+                        <div class="content-title main-title inner-shadow">
+                            HIKING
+                        </div>
+                        <video class="content-video-responsive" controls muted>
+                            <source src="assets/videos/Hiking.mp4" type="video/mp4">
+                        </video>
+                        <div class="content-desc main-desc">
+                            <p>Hiking is a fun activity while climbing a mountain. This package offers mountain climbing activities with beautiful natural scenery through an easy and safe route. The benefits of hiking are body health and also stress relief.</p> 
+                        </div>
+                        <div class="hiking-info">
+                            <div class="circle-info">
+                                <div class="txt-info">
+                                    VISITORS
+                                </div>
+                                <div class="visitor-info-h">
+                                    5.000
+                                </div>                             
+                            </div>
+                            <div class="circle-info">
+                                <div class="txt-info">
+                                    TRACKS
+                                </div>
+                            
+                                <div class="track-info">
+                                    1.000
+                                </div> 
+                            </div>
+                            <div class="btn-main-start">
+                                <a href="./startadventure.html">Start Adventure</a>
+                                <svg id="start-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 5L20 12L13 19M4 12H20H4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <!-- video link : https://www.youtube.com/watch?v=Soqmgr-AHPo -->
+                        <!-- <div class="content-video"> -->
+                            <video class="content-video" controls muted>
+                                <source src="assets/videos/Hiking.mp4" type="video/mp4">
+                            </video>
+                            <!-- <iframe class="content-video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Soqmgr-AHPo?start=65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="hiking-side-fill">
+                <!-- untuk backup hiking-bg -->5
+            </div>     
+        </div>
+
+        <!-- FISHING -->
+        <div class="fishing-section" id="fishing-section">
+            <div class="fishing-side-fill-l">
+            </div>  
+            <div class="fishing-main">
+                <div class="fishing-content">
+                    <div class="content-left">
+                        <!-- video link : https://www.youtube.com/watch?v=PVx2YwGveDQ -->
+                        <!-- <div class="content-video"> -->
+                            <video class="content-video" controls muted>
+                                <source src="assets/videos/Fishing.mp4" type="video/mp4">
+                            </video>
+                            <!-- <iframe class="content-video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/PVx2YwGveDQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="content-right">
+                        <div class="content-title main-title inner-shadow">
+                            FISHING
+                        </div>
+                        <video class="content-left content-video-responsive" controls muted>
+                            <source src="assets/videos/Fishing.mp4" type="video/mp4">
+                        </video>
+                        <div class="content-desc main-desc">
+                            <p>Fishing offers you the chance to improve your self-esteem through respect for the environment, mastering outdoor skills and achieving personal goals. Fishing can also play an important role in ones personal and social development.</p> 
+                        </div>
+                        <div class="fishing-info fishing-txt">
+                            <div class="circle-info">
+                                <div class="txt-info">
+                                    VISITORS
+                                </div>
+                                <div class="visitor-info-f">
+                                    5.000
+                                </div>                             
+                            </div>
+                            <div class="circle-info">
+                                <div class="txt-info">
+                                    SPOTS
+                                </div>
+                                
+                                <div class="spot-info">
+                                    1.000
+                                </div> 
+                            </div>
+                            <div class="btn-main-start">
+                                <a href="./startadventure.html">Start Adventure</a>
+                                <svg id="start-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 5L20 12L13 19M4 12H20H4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fishing-side-fill-r">
+            </div>
+        </div>
+
+        <!-- CAMPING -->
+        <div class="camping-section" id="camping-section">
+            <div class="camping-side-fill-l">
+                <!-- untuk backup hiking-bg -->
+            </div>  
+            <div class="camping-main">
+                <div class="camping-content">
+                    <div class="content-left">
+                        <div class="content-title main-title inner-shadow">
+                            CAMPING
+                        </div>
+                        <video class="content-video-responsive" controls muted>
+                            <source src="assets/videos/Camping.mp4" type="video/mp4">
+                        </video>
+                        <div class="content-desc main-desc">
+                            <p>Camping provides a host of benefits. Simply put, camping is good for you, both in body and mind. Benefits include relationship building, opportunities to learn and develop new skills, unplugging and getting away from screens, connecting with nature, stress reduction, and increasing physical fitness.</p> 
+                        </div>
+                        <div class="camping-info">
+                            <div class="circle-info">
+                                <div class="txt-info">
+                                    VISITORS
+                                </div>
+                                <div class="visitor-info-c">
+                                    5.000
+                                </div>                             
+                            </div>
+                            <div class="circle-info">
+                                <div class="txt-info">
+                                    PLACES
+                                </div>
+                                
+                                <div class="place-info">
+                                    1.000
+                                </div> 
+                            </div>
+                            <div class="btn-main-start">
+                                <a href="./startadventure.html">Start Adventure</a>
+                                <svg id="start-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 5L20 12L13 19M4 12H20H4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <!-- video link : https://www.youtube.com/watch?v=PH5EX9mH0WI&t=1s -->
+                        <!-- <div class="content-video"> -->
+                            <video class="content-video" controls muted>
+                                <source src="assets/videos/Camping.mp4" type="video/mp4">
+                            </video>
+                            <!-- <iframe class="content-video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/PH5EX9mH0WI?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div> 
+            <div class="camping-side-fill-r">
+                <!-- untuk backup hiking-bg -->
+            </div> 
+        </div>
+    </div>
+
+    <!-- Title -->
+    <div class="title-section general-padding">
+        <div class="title-txt inner-shadow">
+            FIND MORE
+        </div>
+        <div class="title-ornament">
+            <svg width="67" height="14" viewBox="0 0 67 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6.61184" cy="6.61184" r="6.61184" fill="#B67B3E"/>
+                <circle cx="33.5" cy="6.61184" r="6.61184" fill="#FAA955"/>
+                <circle cx="60.3882" cy="6.61184" r="6.61184" fill="#BF9D46"/>
+            </svg>                
+        </div>
+    </div>
+
+    <!-- Find More -->
+    <div class="more-section">
+        <div class="more-left">
+            <div class="rent-info-content">
+                <div class="rent-info-title">
+                    Rent
+                </div>
+                <div class="info-logo">
+                    <svg width="7.857vw" height="7.857vw" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_i_294_670)">
+                        <circle cx="65" cy="65" r="65" fill="#FAA955"/>
+                        </g>
+                        <path d="M61.3333 71C61.3333 71.862 61.7197 72.6886 62.4073 73.2981C63.0949 73.9076 64.0276 74.25 65 74.25C65.9725 74.25 66.9051 73.9076 67.5927 73.2981C68.2804 72.6886 68.6667 71.862 68.6667 71H79.6667C82.3397 71 84.844 70.3663 87 69.2613V84C87 85.7239 86.2274 87.3772 84.8521 88.5962C83.4769 89.8152 81.6116 90.5 79.6667 90.5H50.3333C48.3884 90.5 46.5232 89.8152 45.1479 88.5962C43.7726 87.3772 43 85.7239 43 84V69.2613C45.156 70.3663 47.6603 71 50.3333 71H61.3333ZM68.6667 67.75V58C68.6667 57.138 68.2804 56.3114 67.5927 55.7019C66.9051 55.0924 65.9725 54.75 65 54.75C64.0276 54.75 63.0949 55.0924 62.4073 55.7019C61.7197 56.3114 61.3333 57.138 61.3333 58V67.75H50.3333C47.416 67.75 44.6181 66.7228 42.5552 64.8943C40.4923 63.0658 39.3333 60.5859 39.3333 58V48.25C39.3333 45.6641 40.4923 43.1842 42.5552 41.3557C44.6181 39.5272 47.416 38.5 50.3333 38.5H79.6667C82.5841 38.5 85.382 39.5272 87.4449 41.3557C89.5078 43.1842 90.6667 45.6641 90.6667 48.25V58C90.6667 60.5859 89.5078 63.0658 87.4449 64.8943C85.382 66.7228 82.5841 67.75 79.6667 67.75H68.6667ZM57.6667 35.25H50.3333C49.0683 35.25 47.84 35.393 46.6667 35.6595V30.375C46.6667 29.0821 47.2461 27.8421 48.2776 26.9279C49.309 26.0136 50.708 25.5 52.1667 25.5C53.6254 25.5 55.0243 26.0136 56.0558 26.9279C57.0872 27.8421 57.6667 29.0821 57.6667 30.375V35.25ZM83.3334 35.6595C82.1354 35.3868 80.9035 35.2492 79.6667 35.25H72.3333V30.375C72.3333 29.0821 72.9128 27.8421 73.9443 26.9279C74.9757 26.0136 76.3747 25.5 77.8333 25.5C79.292 25.5 80.691 26.0136 81.7224 26.9279C82.7539 27.8421 83.3334 29.0821 83.3334 30.375V35.6595Z" fill="white"/>
+                        <defs>
+                        <filter id="filter0_i_294_670" x="0" y="0" width="130" height="134" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_294_670"/>
+                        </filter>
+                        </defs>
+                    </svg>                        
+                </div>
+                <div class="info-desc">
+                    Grab our high quality yet money-savvy collections to complete your adventure!
+                </div>
+                <div class="rent-info-btn">
+                    <a href="./rent.html">Go!</a>
+                </div>
+            </div>
+        </div>
+        <div class="more-right">
+            <div class="contact-info-content">
+                <div class="contact-info-title">
+                    Contact Us
+                </div>
+                <div class="info-logo">
+                    <svg width="7.857vw" height="7.857vw" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_i_301_671)">
+                        <circle cx="64.9998" cy="65" r="65" fill="#BF9D46"/>
+                        </g>
+                        <path d="M64.4998 41.07C64.4998 39.7476 64.236 38.4381 63.7236 37.2164C63.2113 35.9946 62.4602 34.8845 61.5135 33.9494C60.5667 33.0143 59.4427 32.2726 58.2057 31.7665C56.9687 31.2604 55.6428 31 54.3039 31H44.3206C42.9708 30.9828 41.6309 31.2306 40.3787 31.7289C39.1266 32.2273 37.9871 32.9662 37.0264 33.9029C36.0657 34.8396 35.3029 35.9554 34.7823 37.1856C34.2617 38.4158 33.9936 39.7358 33.9936 41.0691C33.9936 42.4025 34.2617 43.7225 34.7823 44.9527C35.3029 46.1828 36.0657 47.2987 37.0264 48.2354C37.9871 49.1721 39.1266 49.911 40.3787 50.4094C41.6309 50.9077 42.9708 51.1555 44.3206 51.1383H46.2748V56C46.2748 56 64.4998 53.57 64.4998 41.07ZM55.2185 67.6666C55.2185 71.35 52.1979 74.3333 48.4685 74.3333C44.7391 74.3333 41.7185 71.35 41.7185 67.6666C41.7185 63.9833 44.7391 61 48.4685 61C52.1979 61 55.2185 63.9833 55.2185 67.6666ZM48.4685 77.6666C43.6811 77.6666 34.1248 80.05 34.1248 84.7783V91H62.8123V84.7783C62.8123 80.0483 53.2559 77.6666 48.4685 77.6666ZM80.531 74.3333C84.2604 74.3333 87.281 71.35 87.281 67.6666C87.281 63.9833 84.2604 61 80.531 61C76.8016 61 73.781 63.9833 73.781 67.6666C73.781 71.35 76.8016 74.3333 80.531 74.3333ZM80.531 77.6666C75.7436 77.6666 66.1873 80.05 66.1873 84.7783V91H94.8748V84.7783C94.8748 80.0483 85.3184 77.6666 80.531 77.6666ZM78.0706 32.6666C75.3665 32.6666 72.7732 33.7276 70.8611 35.6161C68.949 37.5046 67.8748 40.0659 67.8748 42.7366C67.8748 55.2366 84.0748 57.6666 84.0748 57.6666V52.805H84.6789C86.0288 52.8221 87.3686 52.5744 88.6208 52.076C89.8729 51.5777 91.0124 50.8387 91.9731 49.902C92.9338 48.9653 93.6966 47.8495 94.2172 46.6193C94.7378 45.3892 95.0059 44.0691 95.0059 42.7358C95.0059 41.4025 94.7378 40.0825 94.2172 38.8523C93.6966 37.6221 92.9338 36.5063 91.9731 35.5696C91.0124 34.6329 89.8729 33.8939 88.6208 33.3956C87.3686 32.8973 86.0288 32.6495 84.6789 32.6666H78.0706Z" fill="white"/>
+                        <defs>
+                        <filter id="filter0_i_301_671" x="-0.000244141" y="0" width="130" height="134" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_301_671"/>
+                        </filter>
+                        </defs>
+                    </svg>                                            
+                </div>
+                <div class="info-desc">
+                    Get some great information and guidance from us to succeed your adventure!
+                </div>
+                <div class="contact-info-btn">
+                    <a href="./contactus.html">Go!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+        <a href="./index.html"><h6 id="footer-logo">Travelies</h6></a>
+
+        <div class="footer-center">
+
+            <div class="footer-centerleft">
+
+                <div class="footer-info">
+                    <h4>INFORMATION</h4>
+                    <a class="footer-link" href="./startadventure.html">Start Adventure</a> <br>
+                    <a class="footer-link" href="./rent.html">Rent Now</a> <br>
+                    <a class="footer-link" href="./aboutus.html">About Us</a> <br>
+                    <a class="footer-link" href="./contactus.html">Contact Us</a>
+
+                </div>
+                <div class="footer-quick">
+                    <h4>QUICK LINKS</h4>
+                    <a class="footer-link" href="./startadventure.html#hiking">Hiking</a> <br>
+                    <a class="footer-link" href="./startadventure.html#fishing">Fishing</a> <br>
+                    <a class="footer-link" href="./startadventure.html#Camping">Camping</a>
+
+                </div>
+                <div class="footer-contact">
+                    <h4>CONTACT</h4>
+                    <p class="footer-p">1413 Overlook Drive, Chesterfield, Indiana, IN 46017</p>
+                    <p class="footer-p">765-378-6297; 317-435-2723</p>
+                    <p class="footer-p">travelies@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-centerright">
+                <h4>JOIN OUR NEWSLETTER</h4>
+                <input type="email" id="footer-email" placeholder="insert your email">
+                <input type="submit" id="footer-email" value="JOIN">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+
+            <div class="footer-btmleft">
+                <p class="footer-p" >TERMS OF SERVICE</p>
+                <div class="followus-container">
+                    <p class="footer-p" id="followus" >FOLLOW US</p>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-facebook-square"></i>
+
+                </div>
+            </div>
+            <div class="footer-btmright">
+                <p class="footer-p">COPYRIGHT &copy; 2022 <span style="font-weight: 700;">PPTI 11.</span> ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

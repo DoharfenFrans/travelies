@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <title>Start Adventure - Travelies</title>
+    <link href="./css/style2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <div class="navbar-menu" id="navbar">
+            <div class="logo-container">
+                <div class="humberger">
+                    <div href="" class="icon" onclick="navAdjust()">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
+                <img id="logo" src="./assets/logo.png" alt="Travelies">
+                <a href="#"> Travelies </a>
+            </div>
+            <div class="menu">
+                <div class="menus">
+                    <ul>
+                        <li class="menu-item"><a href="">Home</a></li>
+                        <li class="menu-item dropdown" onmouseover="arrowUp()" onmouseout="arrowDown()">
+                            <a href="#">Rent
+                                <i id="dropdown-arr" class="fa fa-angle-down"></i>
+                            </a>   
+                            <div class="dropdown-menu">
+                                <div class="dropdown-item">
+                                    <a href="./rent.html#hiking">Hiking Gears</a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href="./rent.html#fishing">Fishing Gears</a>
+                                </div>
+                                <div class="dropdown-item">
+                                    <a href="./rent.html#camping">Camping Gears</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item"><a href="">About Us</a></li>
+                        <li class="menu-item"><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="start">
+                    <div class="btn-start btn-active ">
+                        <a href="">START ADVENTURE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- OPENING SECTION  -->
+    <div id="poster">
+        <div class="browse-box">
+            <div class="browse-box-top">
+                <div class="browse-title" id="browse-title-h" onclick="switch_browse(this.id)"> <a href="#" id="hiking-browse" onclick="switch_browse(this.id)"> HIKING </a></div>
+                <div class="browse-title" id="browse-title-f" onclick="switch_browse(this.id)"> <a href="#" id="fishing-browse" onclick="switch_browse(this.id)"> FISHING </a></div>
+                <div class="browse-title" id="browse-title-c" onclick="switch_browse(this.id)"> <a href="#" id="camping-browse" onclick="switch_browse(this.id)"> CAMPING </a></div>
+            </div>
+            <div class="browse-box-btm" id="browse-box-btm">
+                <div class="browse-form">
+                   Location
+                   <i>(state, city, destination)</i>
+                   <input type="text" name="location" id="location">
+                </div>
+                <div class="browse-form">Schedule
+                    <div class="browse-schedule">
+                        <div class="schedule-col">
+                            <i>(check in)</i>
+                            <input class="input-schedule" type="text" name="schedule" id="schedule">
+                        </div>
+                        <div class="schedule-col">
+                            -
+                        </div>
+                        <div class="schedule-col">
+                            <i>(check out)</i>
+                            <input class="input-schedule" type="text" name="schedule" id="schedule">
+                        </div>
+                    </div>
+                </div>
+                <div class="browse-form">Package
+                    <i>(solo, couple, small group, big group)</i>
+                    <select name="packages" id="packages">
+                        <option value="default">&#xf0d7;
+                        </option>
+                        <option value="Solo">SOLO (1 person)</option>
+                        <option value="Couple">COUPLE (2 persons)</option>
+                        <option value="Small Group">SMALL GROUP (Small Group)</option>
+                        <option value="Big Group">GIGA (Big group)</option>
+                    </select>
+                </div>
+                <div class="browse-form-submit">
+                    <div class="browse-btn">
+                        Search
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- MAIN SECTION -->
+    <!-- Title -->
+    <div class="title-section general-padding">
+        <div class="start-adv-title">
+            Popular Search
+        </div>
+        <div class="recoms"> 
+            <div class="recom-btn">Bromo</div>              
+            <div class="recom-btn">Semeru</div>              
+            <div class="recom-btn">Rinjani</div>              
+            <div class="recom-btn">Everest</div>              
+            <div class="recom-btn">Kawi</div>              
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="destinations general-padding">
+        <!-- HIKING -->
+        <div class="destination-title">
+            <div class="start-adv-title">
+                Hiking
+            </div>
+            <svg class="more-btn" width="55" height="55" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M29 3.625C35.7299 3.625 42.1841 6.29843 46.9428 11.0572C51.7016 15.8159 54.375 22.2701 54.375 29C54.375 35.7299 51.7016 42.1841 46.9428 46.9428C42.1841 51.7016 35.7299 54.375 29 54.375C22.2701 54.375 15.8159 51.7016 11.0572 46.9428C6.29843 42.1841 3.625 35.7299 3.625 29C3.625 22.2701 6.29843 15.8159 11.0572 11.0572C15.8159 6.29843 22.2701 3.625 29 3.625ZM29 58C36.6913 58 44.0675 54.9447 49.5061 49.5061C54.9447 44.0675 58 36.6913 58 29C58 21.3087 54.9447 13.9325 49.5061 8.4939C44.0675 3.05535 36.6913 0 29 0C21.3087 0 13.9325 3.05535 8.4939 8.4939C3.05535 13.9325 0 21.3087 0 29C0 36.6913 3.05535 44.0675 8.4939 49.5061C13.9325 54.9447 21.3087 58 29 58ZM16.3125 30.8125C15.8318 30.8125 15.3708 30.6215 15.0309 30.2816C14.691 29.9417 14.5 29.4807 14.5 29C14.5 28.5193 14.691 28.0583 15.0309 27.7184C15.3708 27.3785 15.8318 27.1875 16.3125 27.1875L37.3121 27.1875L29.5292 19.4083C29.1889 19.0679 28.9977 18.6063 28.9977 18.125C28.9977 17.6437 29.1889 17.1821 29.5292 16.8417C29.8696 16.5014 30.3312 16.3102 30.8125 16.3102C31.2938 16.3102 31.7554 16.5014 32.0957 16.8417L42.9707 27.7167C43.1395 27.8851 43.2735 28.0851 43.3648 28.3053C43.4562 28.5255 43.5032 28.7616 43.5032 29C43.5032 29.2384 43.4562 29.4745 43.3648 29.6947C43.2735 29.9149 43.1395 30.1149 42.9707 30.2833L32.0957 41.1582C31.7554 41.4986 31.2938 41.6898 30.8125 41.6898C30.3312 41.6898 29.8696 41.4986 29.5292 41.1582C29.1889 40.8179 28.9977 40.3563 28.9977 39.875C28.9977 39.3937 29.1889 38.9321 29.5292 38.5918L37.3121 30.8125L16.3125 30.8125Z" fill="white"/>
+            </svg>                
+        </div>
+        <div class="destination-lists">
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-h-1.png" alt="Mount Rinjani">
+                <div class="des-desc des-hiking">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">West Nusa Tenggara, Indonesia</div>
+                            <div>Mount Rinjani</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Length</div>
+                        <div class="des-title">Elevation gain</div>
+                        <div>35.6 km</div>
+                        <div>3,365 m</div>
+                    </div>
+                </div>
+                <div id="des-h-1">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-h" onclick="show_info('des-h-1')">
+                    <i id="h-arr-1" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-h-2.png" alt="Mount Rinjani">
+                <div class="des-desc des-hiking">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">East Nusa Tenggara, Indonesia</div>
+                            <div>Mount Kelimutu</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Length</div>
+                        <div class="des-title">Elevation gain</div>
+                        <div>19.8 km</div>
+                        <div>1,188 m</div>
+                    </div>
+                </div>
+                <div id="des-h-2">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-h" onclick="show_info('des-h-2')">
+                    <i id="h-arr-2" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-h-3.png" alt="Mount Rinjani">
+                <div class="des-desc des-hiking">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">East Java, Indonesia</div>
+                            <div>Mount Bromo</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Length</div>
+                        <div class="des-title">Elevation gain</div>
+                        <div>16.8 km</div>
+                        <div>537 m</div>
+                    </div>
+                </div>
+                <div id="des-h-3">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-h" onclick="show_info('des-h-3')">
+                    <i id="h-arr-3" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-h-4.png" alt="Mount Rinjani">
+                <div class="des-desc des-hiking">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">East Java, Indonesia</div>
+                            <div>Mount Ijen</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Length</div>
+                        <div class="des-title">Elevation gain</div>
+                        <div>9.3 km</div>
+                        <div>577 m</div>
+                    </div>
+                </div>
+                <div id="des-h-4">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-h" onclick="show_info('des-h-4')">
+                    <i id="h-arr-4" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- FISHING -->
+        <div class="destination-title">
+            <div class="start-adv-title">
+                Fishing
+            </div>
+            <svg class="more-btn" width="55" height="55" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M29 3.625C35.7299 3.625 42.1841 6.29843 46.9428 11.0572C51.7016 15.8159 54.375 22.2701 54.375 29C54.375 35.7299 51.7016 42.1841 46.9428 46.9428C42.1841 51.7016 35.7299 54.375 29 54.375C22.2701 54.375 15.8159 51.7016 11.0572 46.9428C6.29843 42.1841 3.625 35.7299 3.625 29C3.625 22.2701 6.29843 15.8159 11.0572 11.0572C15.8159 6.29843 22.2701 3.625 29 3.625ZM29 58C36.6913 58 44.0675 54.9447 49.5061 49.5061C54.9447 44.0675 58 36.6913 58 29C58 21.3087 54.9447 13.9325 49.5061 8.4939C44.0675 3.05535 36.6913 0 29 0C21.3087 0 13.9325 3.05535 8.4939 8.4939C3.05535 13.9325 0 21.3087 0 29C0 36.6913 3.05535 44.0675 8.4939 49.5061C13.9325 54.9447 21.3087 58 29 58ZM16.3125 30.8125C15.8318 30.8125 15.3708 30.6215 15.0309 30.2816C14.691 29.9417 14.5 29.4807 14.5 29C14.5 28.5193 14.691 28.0583 15.0309 27.7184C15.3708 27.3785 15.8318 27.1875 16.3125 27.1875L37.3121 27.1875L29.5292 19.4083C29.1889 19.0679 28.9977 18.6063 28.9977 18.125C28.9977 17.6437 29.1889 17.1821 29.5292 16.8417C29.8696 16.5014 30.3312 16.3102 30.8125 16.3102C31.2938 16.3102 31.7554 16.5014 32.0957 16.8417L42.9707 27.7167C43.1395 27.8851 43.2735 28.0851 43.3648 28.3053C43.4562 28.5255 43.5032 28.7616 43.5032 29C43.5032 29.2384 43.4562 29.4745 43.3648 29.6947C43.2735 29.9149 43.1395 30.1149 42.9707 30.2833L32.0957 41.1582C31.7554 41.4986 31.2938 41.6898 30.8125 41.6898C30.3312 41.6898 29.8696 41.4986 29.5292 41.1582C29.1889 40.8179 28.9977 40.3563 28.9977 39.875C28.9977 39.3937 29.1889 38.9321 29.5292 38.5918L37.3121 30.8125L16.3125 30.8125Z" fill="white"/>
+            </svg>                
+        </div>
+        <div class="destination-lists">
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-f-1.png" alt="Mount Rinjani">
+                <div class="des-desc des-fishing">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">Aceh, Indonesia</div>
+                            <div>Andaman Sea</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Logged Catches</div>
+                        <div class="des-title">Avg Bite Time</div>
+                        <div>150</div>
+                        <div>01:50-16:00 GMT 7</div>
+                    </div>
+                </div>
+                <div id="des-f-1">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-f" onclick="show_info('des-f-1')">
+                    <i id="f-arr-1" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-f-2.png" alt="Mount Rinjani">
+                <div class="des-desc des-fishing">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">East Nusa Tenggara, Indonesia</div>
+                            <div>Flores Sea</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Logged Catches</div>
+                        <div class="des-title">Avg Bite Time</div>
+                        <div>103</div>
+                        <div>01:10-16:50 GMT 7</div>
+                    </div>
+                </div>
+                <div id="des-f-2">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-f" onclick="show_info('des-f-2')">
+                    <i id="f-arr-2" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-f-3.png" alt="Mount Rinjani">
+                <div class="des-desc des-fishing">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">Central Sulawesi, Indonesia</div>
+                            <div>Luwuk Banggai</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Logged Catches</div>
+                        <div class="des-title">Avg Bite Time</div>
+                        <div>70</div>
+                        <div>01:10-16:50 GMT 7</div>
+                    </div>
+                </div>
+                <div id="des-f-3">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-f" onclick="show_info('des-f-3')">
+                    <i id="f-arr-3" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-f-4.png" alt="Mount Rinjani">
+                <div class="des-desc des-fishing">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">Central Java, Indonesia</div>
+                            <div>Karimunjawa</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Logged Catches</div>
+                        <div class="des-title">Avg Bite Time</div>
+                        <div>90</div>
+                        <div>01:00-17:00 GMT 7</div>
+                    </div>
+                </div>
+                <div id="des-f-4">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-f" onclick="show_info('des-f-4')">
+                    <i id="f-arr-4" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- CAMPING -->
+        <div class="destination-title">
+            <div class="start-adv-title">
+                Camping
+            </div>
+            <svg class="more-btn" width="55" height="55" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M29 3.625C35.7299 3.625 42.1841 6.29843 46.9428 11.0572C51.7016 15.8159 54.375 22.2701 54.375 29C54.375 35.7299 51.7016 42.1841 46.9428 46.9428C42.1841 51.7016 35.7299 54.375 29 54.375C22.2701 54.375 15.8159 51.7016 11.0572 46.9428C6.29843 42.1841 3.625 35.7299 3.625 29C3.625 22.2701 6.29843 15.8159 11.0572 11.0572C15.8159 6.29843 22.2701 3.625 29 3.625ZM29 58C36.6913 58 44.0675 54.9447 49.5061 49.5061C54.9447 44.0675 58 36.6913 58 29C58 21.3087 54.9447 13.9325 49.5061 8.4939C44.0675 3.05535 36.6913 0 29 0C21.3087 0 13.9325 3.05535 8.4939 8.4939C3.05535 13.9325 0 21.3087 0 29C0 36.6913 3.05535 44.0675 8.4939 49.5061C13.9325 54.9447 21.3087 58 29 58ZM16.3125 30.8125C15.8318 30.8125 15.3708 30.6215 15.0309 30.2816C14.691 29.9417 14.5 29.4807 14.5 29C14.5 28.5193 14.691 28.0583 15.0309 27.7184C15.3708 27.3785 15.8318 27.1875 16.3125 27.1875L37.3121 27.1875L29.5292 19.4083C29.1889 19.0679 28.9977 18.6063 28.9977 18.125C28.9977 17.6437 29.1889 17.1821 29.5292 16.8417C29.8696 16.5014 30.3312 16.3102 30.8125 16.3102C31.2938 16.3102 31.7554 16.5014 32.0957 16.8417L42.9707 27.7167C43.1395 27.8851 43.2735 28.0851 43.3648 28.3053C43.4562 28.5255 43.5032 28.7616 43.5032 29C43.5032 29.2384 43.4562 29.4745 43.3648 29.6947C43.2735 29.9149 43.1395 30.1149 42.9707 30.2833L32.0957 41.1582C31.7554 41.4986 31.2938 41.6898 30.8125 41.6898C30.3312 41.6898 29.8696 41.4986 29.5292 41.1582C29.1889 40.8179 28.9977 40.3563 28.9977 39.875C28.9977 39.3937 29.1889 38.9321 29.5292 38.5918L37.3121 30.8125L16.3125 30.8125Z" fill="white"/>
+            </svg>                
+        </div>
+        <div class="destination-lists">
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-c-1.png" alt="Mount Rinjani">
+                <div class="des-desc des-camping">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">East Nusa Tenggara, Indonesia</div>
+                            <div>The Asah Hill</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Area</div>
+                        <div class="des-title">Available Tents</div>
+                        <div>1,000 m²</div>
+                        <div>Canvas Tent</div>
+                    </div>
+                </div>
+                <div id="des-c-1">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-c" onclick="show_info('des-c-1')">
+                    <i id="c-arr-1" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-c-2.png" alt="Mount Rinjani">
+                <div class="des-desc des-camping">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">East Nusa Tenggara, Indonesia</div>
+                            <div>Flores Sea</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Logged Catches</div>
+                        <div class="des-title">Avg Bite Time</div>
+                        <div>103</div>
+                        <div>01:10-16:50 GMT 7</div>
+                    </div>
+                </div>
+                <div id="des-c-2">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-c" onclick="show_info('des-c-2')">
+                    <i id="c-arr-2" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-c-3.png" alt="Mount Rinjani">
+                <div class="des-desc des-camping">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">Central Sulawesi, Indonesia</div>
+                            <div>Luwuk Banggai</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Logged Catches</div>
+                        <div class="des-title">Avg Bite Time</div>
+                        <div>70</div>
+                        <div>01:10-16:50 GMT 7</div>
+                    </div>
+                </div>
+                <div id="des-c-3">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-c" onclick="show_info('des-c-3')">
+                    <i id="c-arr-3" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="per-destination">
+                <img class="des-img" src="./assets/des-c-4.png" alt="Mount Rinjani">
+                <div class="des-desc des-camping">
+                    <div class="des-top">
+                        <div class="des-name">
+                            <div class="des-from">Central Java, Indonesia</div>
+                            <div>Karimunjawa</div>
+                        </div>
+                        <div class="des-rating">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.3536 7.04257L13.358 6.1301L10.6778 0.440169C10.6046 0.284382 10.4841 0.158269 10.3354 0.0816118C9.96227 -0.111267 9.50887 0.0494654 9.32232 0.440169L6.64213 6.1301L0.646516 7.04257C0.481218 7.0673 0.330088 7.1489 0.214379 7.27254C0.0744931 7.4231 -0.00259025 7.62566 6.6464e-05 7.8357C0.00272317 8.04575 0.0849026 8.24609 0.228547 8.39272L4.56645 12.8215L3.5416 19.0753C3.51757 19.2207 3.53294 19.3703 3.58598 19.5071C3.63901 19.6439 3.72759 19.7624 3.84166 19.8492C3.95573 19.9359 4.09074 19.9875 4.23137 19.998C4.37199 20.0085 4.51262 19.9775 4.63729 19.9086L10 16.9561L15.3628 19.9086C15.5092 19.9902 15.6792 20.0174 15.8422 19.9877C16.2531 19.9135 16.5293 19.5055 16.4585 19.0753L15.4336 12.8215L19.7715 8.39272C19.8896 8.27156 19.9675 8.1133 19.9912 7.9402C20.0549 7.50746 19.7668 7.10686 19.3536 7.04257Z" fill="#FFC700"/>
+                            </svg>                                
+                            <div>4.4</div>
+                        </div>
+                    </div>
+                    <div class="des-btm">
+                        <div class="des-title">Logged Catches</div>
+                        <div class="des-title">Avg Bite Time</div>
+                        <div>90</div>
+                        <div>01:00-17:00 GMT 7</div>
+                    </div>
+                </div>
+                <div id="des-c-4">
+                    <i class="fa fa-money" aria-hidden="true"></i> Start from IDR 500.000 <br>
+                    <i class="fa fa-flag" aria-hidden="true"></i></i> Reachable and Convenient Posts <br>
+                    <i class="fa fa-medkit" aria-hidden="true"></i> Medical Support <br>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i> Food and Basic Equipment<br>
+                    <span></span>
+                    <div class="des-btn">Start Adventure</div>
+                </div>
+                <div class="des-info-tag-c" onclick="show_info('des-c-4')">
+                    <i id="c-arr-4" class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+
+        <a href="index.html"><h6 id="footer-logo">Travelies</h6></a>
+
+        <div class="footer-center">
+
+            <div class="footer-centerleft">
+
+                <div class="footer-info">
+                    <h4>INFORMATION</h4>
+                    <a class="footer-link" href="startadventure.html">Start Adventure</a> <br>
+                    <a class="footer-link" href="rent.html">Rent Now</a> <br>
+                    <a class="footer-link" href="aboutus.html">About Us</a> <br>
+                    <a class="footer-link" href="contactus.html">Contact Us</a>
+
+                </div>
+                <div class="footer-quick">
+                    <h4>QUICK LINKS</h4>
+                    <a class="footer-link" href="startadventure.html#hiking">Hiking</a> <br>
+                    <a class="footer-link" href="startadventure.html#fishing">Fishing</a> <br>
+                    <a class="footer-link" href="startadventure.html#Camping">Camping</a>
+
+                </div>
+                <div class="footer-contact">
+                    <h4>CONTACT</h4>
+                    <p class="footer-p">1413 Overlook Drive, Chesterfield, Indiana, IN 46017</p>
+                    <p class="footer-p">765-378-6297; 317-435-2723</p>
+                    <p class="footer-p">travelies@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="footer-centerright">
+                <h4>JOIN OUR NEWSLETTER</h4>
+                <input type="email" id="footer-email" placeholder="insert your email">
+                <input type="submit" id="footer-email" value="JOIN">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+
+            <div class="footer-btmleft">
+                <p class="footer-p" >TERMS OF SERVICE</p>
+                <div class="followus-container">
+                    <p class="footer-p" id="followus" >FOLLOW US</p>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-facebook-square"></i>
+
+                </div>
+            </div>
+            <div class="footer-btmright">
+                <p class="footer-p">COPYRIGHT &copy; 2022 <span style="font-weight: 700;">PPTI 11.</span> ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
